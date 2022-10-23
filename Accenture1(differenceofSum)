@@ -1,0 +1,15 @@
+def differenceofSum(n,m): #function 
+    notdivi = []  #the list to store number not divisible by m
+    divi = []   #the list to store number divisible by m
+    sum1 = 0    #the variable to store sum of notdivi
+    sum2 = 0    #the variable to store sum of divi
+    for i in range(1,n+1):  #for loop to traversing from 1 to 30
+        if i % m == 0:      #checking if number is divisible by m 
+            divi.append(i)  #if yes, add to divi list
+        else:
+            notdivi.append(i)  #if no, add to notdivi list
+    for i in notdivi:   #calculating the sum of notdivi
+        sum1 += i
+    for i in divi:      #calculating the sum of notdivi
+        sum2 += i
+    return (sum1 - sum2)    #subtracting the sums
