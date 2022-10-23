@@ -1,0 +1,19 @@
+def anagrams(str1,str2):
+    str1_list = [*str1]
+    str2_list = [*str2]
+    tap = 0
+    for i in str1_list:
+        if i in str2_list:
+            flag = 1
+        else:
+            flag = 0
+    for j in str2_list:
+        if j in str1_list:
+            flag = 1
+        else:
+            flag = 0
+    if flag == 1:
+        return "yes"
+    else:
+        return "no"
+print(anagrams("fried","fireds"))        
