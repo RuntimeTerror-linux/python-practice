@@ -1,0 +1,12 @@
+def LargeSmallSum(arr): #function 
+    even = []  #list to store even indexed elements
+    odd = []    #list to store odd indexed elements
+    for i in range(0,len(arr)): #traversing through arr list and adding ele to their list
+        if i%2 == 0:      
+            even.append(arr[i])
+        else:
+            odd.append(arr[i])
+    odd.sort()   #sorting the list
+    even.sort()
+    print(odd[1]+even[len(even)-2])  #printing the sum 
+LargeSmallSum(list(map(int,input().split())))
