@@ -1,0 +1,14 @@
+def Productsmallpair(sum_,arr):
+    arr.sort()
+    if len(arr) < 2:
+        return -1
+    small1 = 0
+    small2 = 0
+    for i in range(0,len(arr)-1):
+        if (arr[i] + arr[i+1] < sum_):
+            small1 = arr[i]
+            small2 = arr[i+1]
+    if small1 and small2 == 0:
+        return 0
+    return (small1,small2)
+Productsmallpair(9,[5,4,2,3,9,1,7])
